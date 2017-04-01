@@ -1,0 +1,35 @@
+body {
+  background-color: #111111;
+  color: #edebec;
+  font-family: Helvetica, sans-serif;
+}
+
+a {
+  font-size: 0.8em;
+  color: #d5aa44;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  background-color: #1b1b1b;
+  border: 1px #282828 solid;
+  color: #cccccc;
+  font-size: 0.9em;
+  margin-top: 10px;
+  padding: 5px;
+  text-align: justify;
+}
+
+li a {
+  color: #d5aa44;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+li a:hover {
+  text-decoration: underline;
+}
+

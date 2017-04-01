@@ -1,0 +1,77 @@
+/*
+ * Fefe's Blog »green plot«
+ * by Alex Brem (( http://freQvibez.net ))
+ */
+
+html {
+  background:#020;
+  color:#6c6;
+  font:13px courier new, fixed;
+  line-height:16px;
+  margin:0 5%;
+  padding:0;
+  border:5px dotted #242;
+  border-width:0 5px; }
+
+body {
+  padding:0 40px;
+  border:5px dashed #242;
+  border-top:5px solid transparent;
+  border-bottom:5px solid transparent; }
+
+h1, h2, h3, ul, li, p, b {
+  margin:0; padding:0; }
+
+a:link, a:visited {
+  color:#aea;
+  text-decoration:none;
+  padding:0 3px; }
+
+a:visited { color:#6a6; }
+
+a:hover {
+  color:black;
+  background:#696; }
+
+a:focus {
+  color:black;
+  background:#696;
+  outline:none }
+
+h2 {
+  margin:24px 0 24px 0;
+  font:200% impact, courier new, fixed;
+  color:#fefefe;
+  text-align:center; }
+
+h2:first-letter { font-size:300%; }
+h2:after { content:""; } /* first-letter fix */
+
+h2+b {
+  display:block;
+  font-size:10px;
+  color:#595;
+  font-weight:bold;
+  text-align:center; }
+
+h3 {
+  font-size:11px;
+  font-weight:normal;
+  text-align:right;
+  margin:20pt 0 10pt;
+  padding:3px 5px;
+  color:#ac6;
+  background:#001c00;
+  border:15px solid #001400;
+  border-width:5px 3px 10px 15px; }
+
+li {
+  list-style-type:square;
+  margin-bottom:13px; }
+
+pre {
+  color:#696;
+  font-size:11px;
+  line-height:14px; }
+
+div { margin-top:15px; }

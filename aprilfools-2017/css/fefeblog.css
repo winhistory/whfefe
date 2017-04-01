@@ -1,0 +1,17 @@
+html{font-family:"Trebuchet MS", Helvetica, Arial, Sans-Serif;font-size:1.5em;color:Lightgray;background:#000;margin:0 2em}
+blockquote{font-style:italic}
+blockquote:before{content: "\201E"}
+blockquote:after{content: "\201C"}
+a:link{color:yellow}
+ul{padding-left:0}
+html ul li{margin:1em 0;padding:1em 0}
+h2{font-variant:small-caps;font-size:2em}
+h3{text-align:center;border-bottom:2px solid #FFF;font-size:1.5em;margin:2em 0 0;padding:0.5em 0}
+ul li ol li,ul li ul li{border:none;padding:0}
+a:visited{color:Gray;text-decoration:line-through}
+a:hover{color:GoldenRod}
+a[href^="mailto:"]:before{content:"\2709\00A0"}
+div{margin:1em 0}
+a[href^="http://"]:before,a[href^="https://"]:before{content:"\2197\00A0"}
+
+

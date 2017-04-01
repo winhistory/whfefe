@@ -1,0 +1,130 @@
+body { 
+	padding-top: 9em;
+	max-width: 50em;
+	text-align: justify;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: Georgia, serif;
+	background-color: #ffde9c;
+	color: #4b3302;
+}
+
+a {
+	text-decoration: none;
+	color: #254b02;
+}
+
+a:hover {
+	text-decoration: underline;
+	background-color: #ffe6b5
+}
+
+tt, code, pre {
+	font-family: Courier, monospace;
+}
+
+pre {
+	border: 1px dashed #4b3302;
+	padding: 0.2em;
+	background-color: #ffe6b5;
+	color: black;
+	overflow: auto;
+}
+
+
+blockquote {
+	margin-left: 0.5em;
+	padding-left: 0.25em;
+	border-left: 2px solid #d7ae5d;
+	background-color: #ffd277;
+	padding: 0.25em;
+	width: 100%;
+}
+
+body > ul > li > a:first-child {
+	display: block;
+	float: left;
+	font-size: 120%;
+	margin-left: -1.5em;
+	margin-right: 0.2em;
+	color: #ffd277;
+	background-color: #ffd277;
+	border: 1px solid #ffd277;
+	text-decoration: none;
+}
+
+body > ul > li > a:first-child:hover {
+	color: black;
+}
+
+body > ul > li {
+	list-style-type: none;
+}
+
+body > ul > li + li {
+	margin-top: 0.5em;
+}
+
+h2 {
+	color: #d7ae5d;
+	font-variant: small-caps;
+	font-family: Garamond, serif;
+	font-size: 400%;
+	position: absolute;
+	top: 0.25em;
+	left: 0.25em;
+	border: 0.2em solid;
+	border-top-color: #f0c368; 
+	border-left-color: #f0c368;
+	border-bottom-color: #bd9952;
+	border-right-color: #bd9952;
+	padding: 0.2em;
+	background-color: #ffe6b5;
+	line-height: 1em;
+	margin-top: 0;
+}
+
+h2 + b {
+	display: block;
+	text-align: center;
+}
+
+h3 {
+	border-right: 0.2em solid #bd9952;
+	border-bottom: 0.2em solid #bd9952;
+	border-top: 1px solid #f0c368;
+	border-left: 1px solid #f0c368;
+	padding: 0.2em;
+	float: left;
+	background-color: #ffe6b5;
+}
+
+h3 + * {
+	clear: left;
+}
+
+
+/* Separat vom Rest damit der CSS-Validator nicht durcheinanderkommt */
+body > ul > li > a:first-child { -moz-border-radius: 10px; }
+h2 { -moz-border-radius: 1em; }
+h3 { -moz-border-radius: 1em; }
+
+
+/* Ein Web-2.0-Scherz. Bei Nichtgefallen einfach die folgenden beiden löschen */
+h2:before {
+	content: "(beta)";
+	font-variant: normal;
+	display: block;
+	font-size: 25%;
+	top: 0px;
+	margin-left: 20em;
+	margin-top: -0.75em;
+	margin-bottom: -0.5em;
+	line-height: 1em;
+}
+
+h2:after {
+	content: "r";
+	font-variant: normal;
+}
+

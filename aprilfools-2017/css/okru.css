@@ -1,0 +1,122 @@
+/*
+ * Okru Minimalist Fefe Theme
+ * Philip Ostendorf an Fefes Blog
+ * http://webdesign.philipostendorf.de/
+ * https://blog.fefe.de/
+ *
+ */
+
+html, pre, code, *::selection{
+	background: #266 !important;
+}h2, h3, h4, a, body>h2+b+br+p+p+ul>li a:first-child{
+	color: #266 !important;
+}h3, h4, ul, ul>li, form, form input, form textarea, form>table tr>td>table{
+	border-color: #266 !important;
+}a:hover{
+	color: #488 !important;
+}li, p{	font-size: 16px;
+	line-height: 24px;
+}*{	margin: 0;
+	padding: 0;
+	font-family: Ubuntu, sans-serif;
+}body{	max-width: 650px;
+	margin: 0 auto;
+	padding: 20px;
+	background: #fff;
+}h2 a{	font-size: 55px;
+	text-decoration: none !important;
+	outline: none !important;
+	float: left;
+	font-family: Courier, serif;
+}body>h2+b, body>h2+b+p{
+	font-weight: normal;
+	color: #999;
+	font-style: italic;
+	margin-bottom: 30px;
+	text-align: right;
+	display: block;
+}body>h2+b{
+	margin: 10px 0 0 !important;
+}h3{	border: thin solid;
+	border-bottom: 0;
+	font-size: 25px;
+	padding: 10px;
+	letter-spacing: -2px;
+}ul{	list-style: none;
+	margin: 0 0 50px 0;
+	border: solid thin;
+	border-top: 0;
+	padding: 10px;
+}ul>li{	margin: 10px 0 20px 0;
+	padding: 10px;
+	border: thin solid;
+	text-align: justify;
+}li:first-of-type{
+	margin-top: 0;
+}li:last-of-type{
+	margin-bottom: 0;
+}h3 + ul > li > a:first-child{
+}a{	text-decoration: none;
+}a:hover{
+	text-decoration: none;
+}a:active{
+	outline: thin dotted;
+	text-decoration: none;
+}blockquote{
+	font-style: italic;
+	margin: 20px 10px;
+	padding-left: 100px;
+	min-height: 55px;
+}blockquote:before{
+	content: "„";
+	margin-top: -50px;
+	margin-left: -100px;
+	font-size: 200px;
+	float: left;
+	font-family: serif;
+	font-weight: bold;
+	color: #888;
+}pre, code{
+	color: #fff;
+	text-align: left;
+	white-space: normal;
+	padding: 10px;
+	margin: 10px 0;
+	display: block;
+}pre, pre *, code, code *{
+	font-family: Courier, monospace;
+}ul ol, ul ul, ol ol, ol ul{
+	margin: 5px 0 5px 25px;
+	border: 0;
+	padding: 0;
+}ul ul>li{
+	list-style: disc;
+	margin: 0;
+	border: 0;
+	padding: 1px 0;
+}::selection{
+	color: #fff;
+}a::selection{
+	color: #000;
+}body>div{
+	color: #888;
+	font-style: italic;
+	text-align: center;
+}body>div a{
+	font-style: normal;
+}body>div a:active{
+	outline: none;
+}body>div[align=center]{
+	color: #fff;
+}body>div[align=center] a:nth-child(1):before{
+	content: "← ";
+	color: #888;
+}body>div[align=center] a:nth-child(3):after{
+	content: " →";
+	color: #888;
+}body>div[align=center] a:only-child:before{
+	content: "";
+}body>ul>li>a:first-child, body>ul>li>a:first-child::selection{
+	background-color: #266; 
+	color: #266; 
+}

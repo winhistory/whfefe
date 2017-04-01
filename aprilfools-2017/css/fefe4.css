@@ -1,0 +1,16 @@
+body {background-color:lightgreen;}
+
+blockquote { background-color:beige; padding:0.5em; font-style:italic; }
+
+pre  { background-color:lightgrey; padding:0.5em; }
+
+li,p { margin:1em 0 1em 0; }
+
+h3 { padding:0.2em 1em 0.2em 2em; background-color:green; color:beige; }
+
+a { color:darkslateblue; text-decoration:none; font-weight:bold;}
+
+a:hover { background-color:white; }
+
+a:visited { color:darkslategray; }
+

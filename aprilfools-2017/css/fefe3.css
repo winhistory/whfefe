@@ -1,0 +1,28 @@
+body{
+  font-family: Helvetica, sans-serif;
+  font-size: 1em;
+  line-height:1.3em;
+}
+
+ul {
+  list-style-type: none;
+  width: 75%;
+}
+
+ul > li {
+  margin-bottom: 1em;
+  padding: 0.5em;
+  border: 1px solid #999;
+  background-color: #ececec;
+}
+
+li li {
+  list style-position: inside;
+  list-style-type: square;
+  margin-bottom: 0.6em;
+}
+
+blockquote {
+  border-left: 4px solid #bbb;
+  padding-left: 0.3em;
+}
