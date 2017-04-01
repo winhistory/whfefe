@@ -1,7 +1,7 @@
 whfefe
 ======
 
-A German blogger's blog-lookalike frontend for April's Fools' Day 2017.
+A German blogger's blog-lookalike frontend for April Fools' Day 2017.
 
 ### Overview
 
