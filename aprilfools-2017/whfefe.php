@@ -14,7 +14,7 @@ if (isset($_GET['css'])) {
 	}
 }
 if (!isset($_COOKIE['af2017shown'])) {
-	if ($_SERVER['REQUEST_URI'] === '/' && mt_rand(0, 6) === 0) {
+	if ($_SERVER['REQUEST_URI'] === '/' && mt_rand(0, 3) === 0) {
 		include 'cloudbleed.php';
 		return;
 	} else {
