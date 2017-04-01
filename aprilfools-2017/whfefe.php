@@ -22,7 +22,8 @@ if (!isset($_COOKIE['af2017shown'])) {
 	}
 } else {
 	if ($_SERVER['REQUEST_URI'] === '/' && !$css) {
-		header("Location: https://{$_SERVER['HTTP_HOST']}/index.php");
+		$protocol = $_SERVER['HTTPS'] ? "https" : "http";
+		header("Location: $protocol://{$_SERVER['HTTP_HOST']}/index.php");
 		return;
 	}
 }
