@@ -1,8 +1,9 @@
 <?php
+define('AVG_YEAR', 31556952);
 if (isset($_GET['css'])) {
 	$newcss = $_GET['css'];
 	if (preg_match('/^[a-z0-9]*\.css$/i', $newcss)) {
-		setcookie("af2017css", $newcss, time() + 3*24*60*60);
+		setcookie("af2017css", $newcss, time() + AVG_YEAR);
 		$css = $newcss;
 	} elseif (empty($_GET['css'])) {
 		setcookie("af2017css", "", time() - 60*60);
@@ -11,20 +12,6 @@ if (isset($_GET['css'])) {
 	$oldcss = $_COOKIE['af2017css'];
 	if (preg_match('/^[a-z0-9]*\.css$/i', $oldcss)) {
 		$css = $oldcss;
-	}
-}
-if (!isset($_COOKIE['af2017shown'])) {
-	if ($_SERVER['REQUEST_URI'] === '/' && mt_rand(0, 3) === 0) {
-		include 'cloudbleed.php';
-		return;
-	} else {
-		setcookie("af2017shown", "1", time() + 3*24*60*60);
-	}
-} else {
-	if ($_SERVER['REQUEST_URI'] === '/' && !$css) {
-		$protocol = $_SERVER['HTTPS'] ? "https" : "http";
-		header("Location: $protocol://{$_SERVER['HTTP_HOST']}/index.php");
-		return;
 	}
 }
 ?><!DOCTYPE html>
@@ -96,9 +83,9 @@ if (!$err) {
 }
 ?><div style="text-align:center"><?php
 if ($monthview) {
-	echo "<a href=\"/af_whfefe?mon=" . prev_month($monthview) . "\">früher</a> -- <a href=\"/af_whfefe\">aktuell</a> -- <a href=\"af_whfefe?mon=" . next_month($monthview) . "\">später</a>";
+	echo "<a href=\"?mon=" . prev_month($monthview) . "\">früher</a> -- <a href=\"/af_whfefe\">aktuell</a> -- <a href=\"?mon=" . next_month($monthview) . "\">später</a>";
 } else {
-	echo "<a href=\"/af_whfefe?mon=" . date("Ym") . "\">ganzer Monat</a>";
+	echo "<a href=\"?mon=" . date("Ym") . "\">ganzer Monat</a>";
 }
 ?></div>
 <div style="text-align:right">Made quick &amp; dirty with the usual LEMP stack<br><a href="impressum.php">Impressum</a></div>
