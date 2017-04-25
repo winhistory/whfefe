@@ -49,7 +49,7 @@ $nicknames = [
 
 // I am a MyBB, too.
 define('IN_MYBB', 1);
-define('THIS_SCRIPT', 'whfefe.php');
+define('MYBB_LOCATION', 'showthread.php');
 require_once "../global.php";
 require_once MYBB_ROOT."inc/class_parser.php";
 $parser = new postParser;
