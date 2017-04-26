@@ -116,7 +116,9 @@ function format_msg($result) {
 	$m = preg_replace('@ />@s', '>', $m);
 	// untouched MyCode
 	$m = preg_replace('/\[video=[a-z]*\]([^[]*)\[\/video\]/si', '(<a href="$1">Video</a>)', $m);
-	$m = preg_replace('/\[img\]([^[]*)\[\/img\]/si', '(<a href="$1">' . random_image_name() . '</a>)', $m);
+	$m = preg_replace_callback('/\[img\]([^[]*)\[\/img\]/si', function($match) {
+		return "(<a href=\"{$match[1]}\">" . random_image_name() . '</a>)';
+	}, $m);
 	$m = preg_replace('@\[attachment=[0-9]*\](?:<br \/>\n)*@si', '', $m);
 	// horizontal rulers look ugly
 	$m = preg_replace('/<hr>\n?/s', '', $m);
