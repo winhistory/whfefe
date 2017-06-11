@@ -1,8 +1,11 @@
 <?php
 define('AVG_YEAR', 31556952);
+// @stephenhay's compromise https://mathiasbynens.be/demo/url-regex
+define('SIMPLE_URL_REGEX', '@^(https?|ftp)://[^\s/$.?#].[^\s]*\.css$@iS');
 if (isset($_GET['css'])) {
 	$newcss = $_GET['css'];
-	if (preg_match('/^[a-z0-9]*\.css$/i', $newcss)) {
+	if (preg_match('/^[a-z0-9]*\.css$/i', $newcss) ||
+	    preg_match(SIMPLE_URL_REGEX, $newcss)) {
 		setcookie("af2017css", $newcss, time() + AVG_YEAR);
 		$css = $newcss;
 	} elseif (empty($_GET['css'])) {
@@ -10,7 +13,8 @@ if (isset($_GET['css'])) {
 	}
 } elseif (isset($_COOKIE['af2017css'])) {
 	$oldcss = $_COOKIE['af2017css'];
-	if (preg_match('/^[a-z0-9]*\.css$/i', $oldcss)) {
+	if (preg_match('/^[a-z0-9]*\.css$/i', $oldcss) ||
+	    preg_match(SIMPLE_URL_REGEX, $oldcss)) {
 		$css = $oldcss;
 	}
 }
@@ -19,8 +23,9 @@ if (isset($_GET['css'])) {
 <head>
 <meta charset="utf-8">
 <title>WHaFes Blog</title>
-<?php if ($css) {?><link rel="stylesheet" type="text/css" href="aprilfools-2017/css/<?= $css ?>">
-<?php } ?></head>
+<?php if ($css) { if (preg_match(SIMPLE_URL_REGEX, $css)) {?><link rel="stylesheet" type="text/css" href="<?= $css ?>">
+<?php } else {?><link rel="stylesheet" type="text/css" href="aprilfools-2017/css/<?= $css ?>">
+<?php }}?></head>
 <body>
 <h2><a href="/af_whfefe">WHaFes Blog</a></h2>
 <b>Wer schöne Beitragsmeldungen für mich hat: ab an dosamp (at) wyntoncraft.t23h.de!</b>
