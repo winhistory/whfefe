@@ -28,7 +28,7 @@ if (isset($_GET['css'])) {
 <?php }}?></head>
 <body>
 <h2><a href="/af_whfefe">WHaFes Blog</a></h2>
-<b>Wer schöne Beitragsmeldungen für mich hat: ab an dosamp (at) wyntoncraft.t23h.de!</b>
+<b>Wer schöne Beitragsmeldungen für mich hat: ab an dosamp (æt) winhistory-forum.net!</b>
 <p style="text-align:right">Fragen? <a href="af_whfefaq.html">Antworten!</a></p>
 <?php
 require_once 'whfefe.inc';
