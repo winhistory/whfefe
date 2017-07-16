@@ -122,6 +122,8 @@ function format_msg($result) {
 	$m = preg_replace('@\[attachment=[0-9]*\](?:<br \/>\n)*@si', '', $m);
 	// horizontal rulers look ugly
 	$m = preg_replace('/<hr>\n?/s', '', $m);
+	// anything more than the BMP confuses our users (replace with U+2BD1)
+	$m = preg_replace('/[\xf0-\xf7][\x80-\xbf]{3}/', "\xe2\xaf\x91", $m);
 	// general cleanup
 	$m = preg_replace('/^\n/', '', $m);
 	return $m;
