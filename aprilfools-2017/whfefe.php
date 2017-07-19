@@ -2,6 +2,7 @@
 define('AVG_YEAR', 31556952);
 // @stephenhay's compromise https://mathiasbynens.be/demo/url-regex
 define('SIMPLE_URL_REGEX', '@^(https?|ftp)://[^\s/$.?#].[^\s]*\.css$@iS');
+$css = '';
 if (isset($_GET['css'])) {
 	$newcss = $_GET['css'];
 	if (preg_match('/^[a-z0-9]*\.css$/i', $newcss) ||
