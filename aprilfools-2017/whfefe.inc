@@ -4,7 +4,7 @@ define('MAGIC_CONST', 1165321313); // {'E', 'u', 'd', 'a'}
 $NO_ENTRIES = "<p>No entries found.</p>\n";
 
 $spalten = "pid,tid,uid,username,message,FROM_UNIXTIME(dateline,'%a %b %d %Y') AS datestr";
-$where = 'fid NOT IN (17,39,40)';
+$where = 'fid NOT IN (17,39,40) AND visible = 1';
 // set something like 'limit' => 1000 if too many results
 $order = ['order_by' => 'dateline', 'order_dir' => 'DESC'];
 
